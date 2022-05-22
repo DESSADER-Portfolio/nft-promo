@@ -1,3 +1,21 @@
 {
-  "title": "Home"
+  "title": "Home",
+  "intro": {
+    "heading": [
+      "Create",
+      "Your Own",
+      "NFT Dream",
+      "Gallery"
+    ],
+    "button": {
+      "label": "Discover NFT",
+      "link": "#"
+    },
+    "description": "The largest NFT marketplace. Authentic and truly unique digital creation. Signed and issued by the creator,made possible by blockchain technology",
+    "counter": [
+      { "label": "Artwork", "value": 25.5 },
+      { "label": "Artist", "value": 15.5 },
+      { "label": "Auciton", "value": 10.5 }
+    ]
+  }
 }
