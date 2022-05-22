@@ -19,7 +19,7 @@ const paths = require("../tools/paths");
 const getFilename = require("../tools/getFilename");
 
 module.exports = {
-  test: /\.(woff(2)?|ttf|eot)$/,
+  test: /\.(woff(2)?|ttf|eot|otf)$/,
   type: "asset/resource",
   generator: {
     filename: `${paths.resources.fonts}/${getFilename("[ext]", "asset/resource")}`
