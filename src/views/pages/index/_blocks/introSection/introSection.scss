@@ -32,6 +32,7 @@ $root-class: "intro-section";
       top: 50%;
       left: 0;
       border-radius: 20px;
+      background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
       transform: translateY(-50%);
@@ -55,6 +56,55 @@ $root-class: "intro-section";
         width: 430px;
         height: 582px;
       }
+    }
+  }
+
+  @include breakpoint(xl) {
+    &__slider {
+      right: 0;
+    }
+  }
+
+  @include breakpoint(lg) {
+    &__main {
+      width: 100%;
+    }
+
+    &__slider {
+      position: relative;
+      top: auto;
+      right: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      grid-gap: 20px;
+      width: 100%;
+      height: 100%;
+
+      .nft-img {
+        position: relative;
+
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          left: auto;
+          width: 100%;
+          height: 400px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    &__main {
+      text-align: center;
+    }
+
+    &__counter {
+      gap: 30px;
+    }
+
+    &__slider {
+      grid-template-columns: 1fr;
     }
   }
 }

@@ -9,7 +9,9 @@ mixin introSection(props = {})
     const classes = [
       rootClassName,
       className,
-      "pt-144"
+      "py-144",
+      "xl:py-84",
+      "sm:py-32"
     ];
 
   // Start: [Section: intro-section]
@@ -21,7 +23,7 @@ mixin introSection(props = {})
     +container()
 
       // Start: [Stack: main]
-      +stack({class: [`${rootClassName}__main`, "flex-direction-column"]})
+      +stack({class: [`${rootClassName}__main`, "flex-direction-column", "lg:pb-64"]})
         +typography({
           class: [`${rootClassName}__heading`, "mb-32"],
           as: "h1", 
@@ -35,11 +37,18 @@ mixin introSection(props = {})
         +stack({class: [
           `${rootClassName}__description`,
           "align-items-center",
+          "sm:flex-direction-column-reverse",
           "pr-244",
-          "mb-64"
+          "mb-64",
+          "md:pr-0"
         ]})
           +button({
-            class: [`${rootClassName}__button`, "mr-44"],
+            class: [
+              `${rootClassName}__button`, 
+              "mr-44", 
+              "sm:mt-24", 
+              "sm:mr-0"
+            ],
             icon: "arrow-up-right",
             as: "a",
             link: button.link
@@ -47,19 +56,18 @@ mixin introSection(props = {})
           +typography({class: `${rootClassName}__description`, variant: "body-default"}) 
             | #{content.intro.description}
 
+        // End: [Stack: description] 
+
         // Start: [Stack: counter]
-        +stack({class: `${rootClassName}__counter`})
+        +stack({class: [`${rootClassName}__counter`, "sm:justify-content-center"]})
           each item in counter
             +stack({class: [`${rootClassName}__counter-item`, "flex-direction-column"]})
               +typography({class: "mb-12", variant: "body-default"}) 
                 | #{item.label}
               +typography({as: "span", variant: "h4"}) 
                 | #{item.value} K
-        
+  
         // End: [Stack: counter] 
-
-        // End: [Stack: description] 
-
       // End: [Stack: main]
 
       // Start: [Stack: slider] 
