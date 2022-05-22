@@ -1,4 +1,5 @@
 extends /templates/common.pug
+include _blocks/blocks.pug
 
 block vars
   - const content = require("@src/content/index.json");
@@ -8,3 +9,10 @@ block title
   title #{appData.name} – #{content.title}
   
 block content
+
+  +introSection({
+    heading: content.intro.heading,
+    button: content.intro.button,
+    description: content.intro.description,
+    counter: content.intro.counter
+  })

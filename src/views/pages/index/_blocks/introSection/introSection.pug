@@ -1,0 +1,67 @@
+mixin introSection(props = {})
+  - const rootClassName = "intro-section";
+  - const className = props.class || null;
+  - const style = props.style || null;
+  - const heading = props.heading || [];
+  - const button = props.button || {};
+  - const counter = props.counter || [];
+  -
+    const classes = [
+      rootClassName,
+      className,
+      "pt-144"
+    ];
+
+  // Start: [Section: intro-section]
+  section(
+    class = classes 
+    style = style
+  )
+    // Start: [Container]
+    +container()
+
+      // Start: [Stack: main]
+      +stack({class: [`${rootClassName}__main`, "flex-direction-column"]})
+        +typography({
+          class: [`${rootClassName}__heading`, "mb-32"],
+          as: "h1", 
+          variant: "h1"
+        })
+          each str in heading
+            span
+              span #{str}
+        
+        // Start: [Stack: description] 
+        +stack({class: [
+          `${rootClassName}__description`,
+          "align-items-center",
+          "pr-244",
+          "mb-64"
+        ]})
+          +button({
+            class: [`${rootClassName}__button`, "mr-44"],
+            icon: "arrow-up-right",
+            as: "a",
+            link: button.link
+          }) #{button.label}
+          +typography({class: `${rootClassName}__description`, variant: "body-default"}) 
+            | #{content.intro.description}
+
+        // Start: [Stack: counter]
+        +stack({class: `${rootClassName}__counter`})
+          each item in counter
+            +stack({class: [`${rootClassName}__counter-item`, "flex-direction-column"]})
+              +typography({class: "mb-12", variant: "body-default"}) 
+                | #{item.label}
+              +typography({as: "span", variant: "h4"}) 
+                | #{item.value} K
+        
+        // End: [Stack: counter] 
+
+        // End: [Stack: description] 
+
+      // End: [Stack: main]
+
+    // End: [Container]
+
+  // End: [Section: intro-section]

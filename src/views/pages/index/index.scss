@@ -1,3 +1,6 @@
-$root-class: "index";
+@import "@styles/common/vars";
+$root-class: "index-page";
 
-.#{$root-class} {}
+.#{$root-class} {
+  @import "./_blocks/blocks";
+}

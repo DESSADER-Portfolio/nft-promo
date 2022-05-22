@@ -1,0 +1,21 @@
+$root-class: "intro-section";
+
+.#{$root-class} {
+  &__main {
+    width: 70%;
+  }
+
+  &__button {
+    flex: 0 0 auto;
+  }
+
+  &__counter {
+    gap: 90px;
+  }
+
+  &__counter-item {
+    p {
+      color: $light-purple;
+    }
+  }
+}
