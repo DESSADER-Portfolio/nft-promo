@@ -1,1 +1,28 @@
 @import "../utils/font-face";
+
+@include font-face(
+  $name: "JetBrainsMono",
+  $path: "#{$font-root-path}/JetBrainsMono/JetBrainsMono-Regular",
+  $formats: (
+    woff2: (ext: "woff2", name: "woff2")
+  ),
+  $weight: 400
+);
+
+@include font-face(
+  $name: "Monument",
+  $path: "#{$font-root-path}/Monument/MonumentExtended-Regular",
+  $formats: (
+    otf: (ext: "otf", name: "opentype")
+  ),
+  $weight: 400
+);
+
+@include font-face(
+  $name: "Monument",
+  $path: "#{$font-root-path}/Monument/MonumentExtended-Black",
+  $formats: (
+    otf: (ext: "otf", name: "opentype")
+  ),
+  $weight: 800
+);

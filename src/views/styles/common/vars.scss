@@ -2,13 +2,11 @@
 * Fonts
 */
 
-$font-family: "";
+$font-family: "JetBrainsMono";
+$font-family-alt: "Monument";
 $font-weights: (
-  light: 300,
   regular: 400,
-  medium: 500,
-  semibold: 600,
-  bold: 700
+  heavy: 800,
 );
 $font-base-size: 16px;
 $font-root-path: "../../assets/fonts";
