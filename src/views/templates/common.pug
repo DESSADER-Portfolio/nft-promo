@@ -29,19 +29,19 @@ html(lang="ru")
     
   body(classs = rootClass)
 
-    // ---------- Start: [Navbar] ----------
+    // Start: [Navbar]
     +navbar({
       menuItems: appData.navigation.header,
       extra: appData.navigation.extra
     })
 
-    // ----------- End: [Navbar] -----------
+    // End: [Navbar]
   
-    // ---------- Start: [Main] ----------
+    // Start: [Main]
     main(class = [
       `${pageClass}`,
       `${rootClassName}-content`
     ])
       block content
       
-    // ----------- End: [Main] -----------
+    // End: [Main]
