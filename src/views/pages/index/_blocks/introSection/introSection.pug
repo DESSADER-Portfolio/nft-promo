@@ -62,6 +62,23 @@ mixin introSection(props = {})
 
       // End: [Stack: main]
 
+      // Start: [Stack: slider] 
+      +stack({class: `${rootClassName}__slider`})
+        div(
+          class = [`${rootClassName}__slider-item`, "nft-img"]
+          style = `background-image: url(${require(`../../../assets/images/nft-1.webp`)})`
+        )
+        div(
+          class = [`${rootClassName}__slider-item`, "nft-img"]
+          style = `background-image: url(${require(`../../../assets/images/nft-2.webp`)})`
+        )
+        div(
+          class = [`${rootClassName}__slider-item`, "nft-img"]
+          style = `background-image: url(${require(`../../../assets/images/nft-3.webp`)})`
+        )
+        
+      // End: [Stack: slider] 
+
     // End: [Container]
 
   // End: [Section: intro-section]
