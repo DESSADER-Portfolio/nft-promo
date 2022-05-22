@@ -29,6 +29,11 @@ html(lang="ru")
     
   body(class = [rootClass, "no-scroll"])
 
+    // Start: [Preloader] 
+    +preloader({style: "display: flex"})
+
+    // End: [Preloader] 
+
     // Start: [Navbar]
     +navbar({
       menuItems: appData.navigation.header,
