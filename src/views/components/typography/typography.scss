@@ -2,33 +2,31 @@ $root-class: "typography";
 
 $heading-variants: (
   h1: (
-    default: (font-size: 60px, line-height: 70px),
-    xl: (font-size: 50px, line-height: 60px),
-    lg: (font-size: 45px, line-height: 55px),
-    md: (font-size: 40px, line-height: 50px)
-  ),
-  h2: (
-    default: (font-size: 50px, line-height: 60px),
-    xl: (font-size: 40px, line-height: 50px),
-    lg: (font-size: 35px, line-height: 45px),
-    md: (font-size: 30px, line-height: 40px)
-  ),
-  h3: (
-    default: (font-size: 45px, line-height: 55px),
-    xl: (font-size: 35px, line-height: 45px),
-    lg: (font-size: 30px, line-height: 40px),
-    md: (font-size: 25px, line-height: 35px)
+    default: (font-size: 110px, line-height: 120px),
+    xl: (font-size: 90px, line-height: 110px),
+    lg: (font-size: 70px, line-height: 80px),
+    md: (font-size: 50px, line-height: 60px),
+    xs: (font-size: 40px, line-height: 50px),
   ),
   h4: (
-    default: (font-size: 40px, line-height: 50px),
-    xl: (font-size: 30px, line-height: 40px),
-    lg: (font-size: 25px, line-height: 35px),
-    md: (font-size: 20px, line-height: 30px)
+    default: (font-size: 24px, line-height: 26px),
   )
 );
 
 .#{$root-class} {
   display: block;
+
+  /*
+  * Fonts
+  */
+
+  &\:font-main {
+    font-family: $font-family;
+  }
+
+  &\:font-alt {
+    font-family: $font-family-alt;
+  }
 
   /*
   * Weigths
@@ -44,6 +42,10 @@ $heading-variants: (
 
   @each $heading, $breakpoints in $heading-variants {
     &\:variant-#{$heading} {
+      font-family: $font-family-alt;
+      font-weight: map-get($map: $font-weights, $key: heavy);
+      letter-spacing: -2px;
+
       @each $breakpoint-name, $breakpoint-styles in $breakpoints {
         $current-breakpoint-style: map-get($map: $breakpoints, $key: $breakpoint-name);
         @if $breakpoint-name == default {
@@ -61,28 +63,10 @@ $heading-variants: (
   * Body text
   */
 
-  &\:variant-body-small {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  &\:variant-body-default {
-    font-size: $font-base-size;
-    line-height: 26px;
-  }
-
-  &\:variant-body-large {
+  &\:body-default {
     font-size: 18px;
     line-height: 28px;
-  }
-
-  /*
-  * Caption
-  */
-
-  &\:variant-caption {
-    font-size: 12px;
-    line-height: 20px;
+    letter-spacing: -2px;
   }
 
   /*
