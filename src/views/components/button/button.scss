@@ -16,6 +16,15 @@ $root-class: "button";
   transition-property: background, color;
 
   /*
+  * Elements
+  */
+
+  &__icon {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  /*
   * Variants
   */
 
