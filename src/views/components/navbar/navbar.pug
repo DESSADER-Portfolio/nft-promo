@@ -5,10 +5,12 @@ mixin navbar(props = {})
   - const className = props.class || null;
   - const style = props.style || null;
   - const menuItems = props.menuItems || [];
+  - const extra = props.extra || [];
   -
     const classes = [
       rootClassName,
-      className
+      className,
+      "py-24"
     ];
 
   nav(
@@ -16,21 +18,21 @@ mixin navbar(props = {})
     style = style
   )
     +container()
-      +stack({
-        class: [
+      +stack({class: "justify-content-flex-end"})
+        div(class = [
+          "menu", 
+          "display-flex",
           "justify-content-space-between",
+          "md:justify-content-flex-start",
           "align-items-center"
-        ]
-      })
-        +typography({
-          class: `${rootClassName}__logo`,
-          variant: "body-large", 
-          weight: "semibold"
-        }) Webpack Starter
-        div(class = "menu")
-          +nav({
-            items: menuItems
-          })
+        ])
+          +nav({items: menuItems})
+          each item in extra
+            +button({
+              class: "md:mt-24",
+              as: "a", 
+              link: item.link
+            }) #{item.label}
         button(class = "menu-control")
           span
           span

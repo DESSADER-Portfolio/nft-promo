@@ -6,11 +6,16 @@ $root-class: "nav";
   &__link {
     display: block;
     padding: 24px 16px;
-    color: #000000;
+    color: $light;
     text-decoration: none;
+    transition: 0.3s transform;
 
     &:hover {
-      background: rgba(#000000, 0.05);
+      transform: translateY(-4px);
+    }
+
+    &:active {
+      transform: scale(0.95);
     }
   }
 
