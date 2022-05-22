@@ -1,0 +1,19 @@
+{
+  "name": "NFT Dream",
+  "meta": {
+    "description": "Create your own NFT dream gallery",
+    "keywords": ["crypto", "nft", "dream"]
+  },
+  "navigation": {
+    "header": [
+      { "label": "Drop", "link": "#" },
+      { "label": "Marketplace", "link": "#" },
+      { "label": "Contacts", "link": "#" },
+      { "label": "Creator", "link": "#" },
+      { "label": "Community", "link": "#" }
+    ],
+    "extra": [
+      { "label": "Connect wallet", "link": "#" }
+    ]
+  }
+}
