@@ -44,7 +44,7 @@ mixin introSection(props = {})
         ]})
           +button({
             class: [
-              `${rootClassName}__button`, 
+              `${rootClassName}__description-button`, 
               "mr-44", 
               "sm:mt-24", 
               "sm:mr-0"
@@ -53,7 +53,7 @@ mixin introSection(props = {})
             as: "a",
             link: button.link
           }) #{button.label}
-          +typography({class: `${rootClassName}__description`, variant: "body-default"}) 
+          +typography({class: `${rootClassName}__description-text`, variant: "body-default"}) 
             | #{content.intro.description}
 
         // End: [Stack: description] 
