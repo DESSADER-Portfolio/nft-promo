@@ -4,5 +4,11 @@
 $root-class: "index-page";
 
 .#{$root-class} {
+  padding-bottom: 250px;
+
+  @include breakpoint(lg) {
+    padding-bottom: 0;
+  }
+
   @import "./_blocks/blocks";
 }

@@ -22,6 +22,10 @@ body {
     overflow: hidden;
   }
 
+  .app-layout-content {
+    overflow-x: clip;
+  }
+
   @include breakpoint(sm) {
     background-position: top right, 0 50%;
     background-size: cover;

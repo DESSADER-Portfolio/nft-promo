@@ -71,6 +71,30 @@ $root-class: "intro-section";
     background-repeat: no-repeat;
   }
 
+  &__bg-img {
+    .bg-img {
+      position: absolute;
+      background-size: 100%;
+      background-repeat: no-repeat;
+
+      &-1 {
+        top: -60px;
+        left: -350px;
+        width: 400px;
+        height: 400px;
+        background-image: url("../../../assets/images/bg-1.png");
+      }
+
+      &-2 {
+        top: -330px;
+        right: -220px;
+        width: 600px;
+        height: 600px;
+        background-image: url("../../../assets/images/bg-2.png");
+      }
+    }
+  }
+
   @include breakpoint(xl) {
     &__slider {
       right: 0;
@@ -106,6 +130,10 @@ $root-class: "intro-section";
     }
 
     &__badge {
+      display: none;
+    }
+
+    &__bg-img {
       display: none;
     }
   }
