@@ -59,7 +59,7 @@ $root-class: "intro-section";
     }
   }
 
-  &__badge {
+  &__slider-badge {
     position: absolute;
     bottom: -50px;
     left: -50px;
@@ -129,7 +129,7 @@ $root-class: "intro-section";
       }
     }
 
-    &__badge {
+    &__slider-badge {
       display: none;
     }
 
