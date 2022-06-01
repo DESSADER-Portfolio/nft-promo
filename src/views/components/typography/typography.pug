@@ -1,16 +1,16 @@
 mixin typography(props = {})
-  - const availableElements = ["p", "span", "h1", "h4"];
-  - const availableVariants = ["body-default", "h1", "h4"];
-  - const availableWeights = ["regular", "heavy"];
-  - const availableFonts = ["main", "alt"];
+  - const elements = ["p", "span", "h1", "h4"];
+  - const variants = ["body-default", "h1", "h4"];
+  - const fonts = ["main", "alt"];
+  - const weights = ["regular", "heavy"];
 
   - const rootClassName = "typography";
   - const className = props.class || null;
   - const style = props.style || null;
-  - const as = availableElements.includes(props.as) ? props.as : availableElements[0];
-  - const variant = availableVariants.includes(props.variant) ? props.variant : variants[0];
-  - const font = availableFonts.includes(props.font) ? props.font : null;
-  - const weight = availableWeights.includes(props.weight) ? props.weight : null;
+  - const as = elements.includes(props.as) ? props.as : elements[0];
+  - const variant = variants.includes(props.variant) ? props.variant : variants[0];
+  - const font = fonts.includes(props.font) ? props.font : null;
+  - const weight = weights.includes(props.weight) ? props.weight : null;
   -
     const classes = [
       rootClassName,

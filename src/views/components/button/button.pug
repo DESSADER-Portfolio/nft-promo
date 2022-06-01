@@ -1,12 +1,12 @@
 mixin button(props = {})
-  - const availableElements = ["button", "a"];
-  - const availableVariants = ["primary"];
+  - const elements = ["button", "a"];
+  - const variants = ["primary"];
   
   - const rootClassName = "button";
   - const className = props.class || null;
   - const style = props.style || null;
-  - const as = availableElements.includes(props.as) ? props.as : availableElements[0];
-  - const variant = availableVariants.includes(props.variant) ? props.variant : availableVariants[0];
+  - const as = elements.includes(props.as) ? props.as : elements[0];
+  - const variant = variants.includes(props.variant) ? props.variant : variants[0];
   - const link = props.as === "a" ? props.link : null;
   - const icon = props.icon || null;
   - const id = props.id || null;
