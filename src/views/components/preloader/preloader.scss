@@ -9,6 +9,7 @@ $root-class: "preloader";
   z-index: 100;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   background: $background-color;
 
   &__circle {
