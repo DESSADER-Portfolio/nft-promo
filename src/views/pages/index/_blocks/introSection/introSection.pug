@@ -14,18 +14,26 @@ mixin introSection(props = {})
       "sm:py-32"
     ];
 
-  // Start: [Section: intro-section]
   section(
     class = classes 
     style = style
   )
-    // Start: [Container]
+    // Start: [container]
     +container()
 
-      // Start: [Stack: main]
-      +stack({class: [`${rootClassName}__main`, "flex-direction-column", "lg:pb-64"]})
+      // Start: [stack/main]
+      +stack({
+        class: [
+          `${rootClassName}__main`,
+          "flex-direction-column",
+          "lg:pb-64"
+        ]
+      })
         +typography({
-          class: [`${rootClassName}__heading`, "mb-32"],
+          class: [
+            `${rootClassName}__heading`,
+            "mb-32"
+          ],
           as: "h1", 
           variant: "h1"
         })
@@ -33,7 +41,7 @@ mixin introSection(props = {})
             span
               span #{str}
         
-        // Start: [Stack: description] 
+        // Start: [stack/description] 
         +stack({class: [
           `${rootClassName}__description`,
           "align-items-center",
@@ -53,24 +61,43 @@ mixin introSection(props = {})
             as: "a",
             link: button.link
           }) #{button.label}
-          +typography({class: `${rootClassName}__description-text`, variant: "body-default"}) 
+          +typography({
+            class: `${rootClassName}__description-text`, 
+            variant: "body-default"
+          }) 
             | #{content.intro.description}
 
-        // End: [Stack: description] 
+        // End: [stack/description] 
 
         // Start: [Stack: counter]
-        +stack({class: [`${rootClassName}__counter`, "sm:justify-content-center"]})
+        +stack({
+          class: [
+            `${rootClassName}__counter`,
+            "sm:justify-content-center"
+          ]
+        })
           each item in counter
-            +stack({class: [`${rootClassName}__counter-item`, "flex-direction-column"]})
-              +typography({class: "mb-12", variant: "body-default"}) 
+            +stack({
+              class: [
+                `${rootClassName}__counter-item`,
+                "flex-direction-column"
+              ]
+            })
+              +typography({
+                class: "mb-12", 
+                variant: "body-default"
+              }) 
                 | #{item.label}
-              +typography({as: "span", variant: "h4"}) 
+              +typography({
+                as: "span", 
+                variant: "h4"
+              }) 
                 | #{item.value} K
   
         // End: [Stack: counter] 
-      // End: [Stack: main]
+      // End: [stack/main]
 
-      // Start: [Stack: slider] 
+      // Start: [stack/slider] 
       +stack({class: `${rootClassName}__slider`})
         div(class = `${rootClassName}__slider-badge`)
         div(
@@ -86,7 +113,7 @@ mixin introSection(props = {})
           style = `background-image: url(${require(`../../../assets/images/nft-3.webp`)})`
         )
         
-      // End: [Stack: slider] 
+      // End: [stack/slider] 
 
       // Start: [bg-img] 
       div(class = `${rootClassName}__bg-img`)
@@ -94,5 +121,4 @@ mixin introSection(props = {})
         div(class = [`${rootClassName}__bg-img-item`, "bg-img", "bg-img-2"])
 
       // End: [bg-img] 
-    // End: [Container]
-  // End: [Section: intro-section]
+    // End: [container]

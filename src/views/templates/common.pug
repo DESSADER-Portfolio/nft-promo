@@ -29,24 +29,19 @@ html(lang="ru")
     
   body(class = [rootClass, "no-scroll"])
 
-    // Start: [Preloader] 
     +preloader({style: "display: flex"})
 
-    // End: [Preloader] 
-
-    // Start: [Navbar]
+    // Start: [navbar]
     +navbar({
       menuItems: appData.navigation.header,
       extra: appData.navigation.extra
     })
-
-    // End: [Navbar]
+    // End: [navbar]
   
-    // Start: [Main]
+    // Start: [main]
     main(class = [
       `${pageClass}`,
       `${rootClassName}-content`
     ])
       block content
-      
-    // End: [Main]
+    // End: [main]

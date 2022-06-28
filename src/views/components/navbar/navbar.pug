@@ -17,15 +17,22 @@ mixin navbar(props = {})
     class = classes 
     style = style
   )
+    // Start: [container] 
     +container()
+      
+      // Start: [stack] 
       +stack({class: "justify-content-flex-end"})
-        div(class = [
-          "menu", 
-          "display-flex",
-          "justify-content-space-between",
-          "md:justify-content-flex-start",
-          "align-items-center"
-        ])
+        
+        // Start: [menu] 
+        div(
+          class = [
+            "menu", 
+            "display-flex",
+            "justify-content-space-between",
+            "md:justify-content-flex-start",
+            "align-items-center"
+          ]
+        )
           +nav({items: menuItems})
           each item in extra
             +button({
@@ -33,7 +40,13 @@ mixin navbar(props = {})
               as: "a", 
               link: item.link
             }) #{item.label}
+        // End: [menu] 
+
+        // Start: [menu-control]
         button(class = "menu-control")
           span
           span
           span
+        // End: [menu-control]
+      // End: [stack] 
+    // End: [container] 
